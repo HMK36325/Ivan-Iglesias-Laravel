@@ -1,0 +1,45 @@
+
+
+body { 
+  background-color: #F6F6FF; 
+  font-family: sans-serif; 
+  padding: 0 20px;
+  margin-left:100px;
+}
+
+h1 { 
+  text-transform: uppercase; 
+  color: #0066CC;
+}
+
+fieldset { 
+  background-color: #E6E6FF;
+  border: #8686FF 3px solid; 
+  width:60%;
+ 
+} 
+
+legend { 
+  background-color: white; 
+   border: #8686FF 3px solid; 
+  font-size: 120%; 
+  padding: 0px 10px; 
+}
+
+
+.der { 
+  text-align: right; 
+  margin: 10px 0px; 
+}
+
+
+.aviso {
+  color: red;
+}
+
+/* Tablas */
+
+   th {font-size: 10pt; font-weight: bold; color: white; background: #0066CC; text-align: left;}
+   td {font-size: 10pt; background: #E6E6FF;padding-top:10px;}
+   td.derecha {font-size: 10pt; text-align: right; background: #E6E6FF;}
+   td.izquierda {font-size: 10pt; text-align: left; background: #E6E6FF;}

@@ -1,0 +1,61 @@
+/* CSS soluciones de los ejercicios
+*/
+
+body { 
+  background-color: #F6F6FF; 
+  font-family: sans-serif; 
+  padding: 0 20px;
+}
+
+
+fieldset { 
+  background-color: #E6E6FF;
+  border: #8686FF 3px solid; 
+  padding: 10px 20px 20px;
+  width:80%;
+} 
+
+legend { 
+  background-color: white; 
+  border: #8686FF 3px solid; 
+  font-size: 120%; 
+  padding: 0px 10px; 
+}
+
+input { 
+  font-family: monospace; 
+}
+
+.der { 
+  
+  margin: 10px 0px; 
+}
+
+label{
+float:left;
+text-align:right;
+display:block;
+}
+
+select{
+float:left;
+}
+
+/* Tablas */
+table {border: #8686FF 3px solid;
+height:100%;
+}
+
+td {
+font-size: 14pt;
+width:22px;
+line-height:30px; 
+border:1px solid blue;
+}
+
+th {
+  font-weight: bold; 
+  color: red; 
+  background: #0066CC; 
+  text-align: center;
+}

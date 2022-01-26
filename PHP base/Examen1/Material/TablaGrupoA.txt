@@ -1,0 +1,8 @@
+<h3>Porcentaje según tipo de trabajador</h3>
+		<table>
+			<tr><th>Tipo</th><th>Porcentaje</th></tr>
+			<tr><td>ADMINISTRATIVO</td><td>10%</td></tr>
+			<tr><td>COMERCIAL</td><td>15%</td></tr>
+			<tr><td>TECNICO</td><td>20%</td></tr>
+			<tr><td>DIRECTIVO</td><td>30%</td></tr>
+       		 </table>

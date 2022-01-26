@@ -1,0 +1,111 @@
+/* CSS soluciones de los ejercicios
+*/
+
+body { 
+  background: #E6E6FF; 
+  font-family: sans-serif; 
+  padding: 0 10px;
+  margin:10px;
+  font-size:14px;
+}
+
+h1,h2 { 
+  margin: 10px;
+  color:#00C0C0;
+ 
+}
+
+hr{
+width:50%;	
+float:left;
+background-color:#00C0C0;
+height:1px;	
+}
+th{
+	font-weight:bold;
+	width:50px;
+	
+}
+
+td{
+width:160px;
+border:1px solid #00C0C0;
+	
+}
+tr{
+	margin-left:3px;
+}
+
+img{
+border:2px solid black;
+margin-left:50px;
+}
+
+#izquierda{
+	width:60%;
+	float:left;
+	background-color:lightyellow;
+	border:1px solid grey;
+}
+
+.aviso{
+  color:red;
+  font-weight:bold;
+}
+
+a{
+color:blue;
+	
+}
+
+#cesta{
+width:30%;
+float:left;
+
+background-color:lightyellow;
+border:1px solid grey;	
+font-size:8px;
+}
+
+
+fieldset { 
+  background-color: #B5E3F8;
+  border:#00C0C0 3px solid; 
+ /* padding: 10px 20px 20px;*/
+  width:50%;
+} 
+
+legend { 
+  background-color: white; 
+  border:#00C0C0 3px solid; 
+  font-size: 120%; 
+  padding: 0px 10px; 
+}
+.a1 input{
+	width:90px;
+}
+input { 
+  font-family: monospace;
+
+	margin:5px;
+}
+select{
+margin:5px;
+}
+
+input[type=radio]{
+width:12px;
+font-weight:bold;
+color:gray;
+}
+
+.der { 
+  text-align: right; 
+  margin: 10px 0px; 
+}
+
+.aviso{
+color:red;	
+}
+
+

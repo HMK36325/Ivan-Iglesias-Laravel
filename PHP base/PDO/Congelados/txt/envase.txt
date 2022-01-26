@@ -1,0 +1,8 @@
+Producto: Asado de pavipollo, nuevo precio: 6
+Producto: Moussaka, nuevo precio: 4
+Producto: Asado de pavipollo, nuevo precio: 60
+Producto: Asado de pavipollo, nuevo precio: 6
+Producto: Moussaka, nuevo precio: 40
+Producto: Gratinado de pescado, nuevo precio: 40
+Producto: Moussaka, nuevo precio: 4
+Producto: Gratinado de pescado, nuevo precio: 4
