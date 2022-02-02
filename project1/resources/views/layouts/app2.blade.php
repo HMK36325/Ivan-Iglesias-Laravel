@@ -32,10 +32,13 @@
                         {{ __("Proyectos") }}<!-- Me crea el boton Proyectos al al lado de Laravel una vez estoy autenticado en /projects(la carpeta que hemos creado en views,y llama a su index.) -->
                         </a>
                         @if(Auth::user()->hasRoles('Admin'))
-                        <a href="{{route('projects.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
+                        <a href="{{route('admin.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
                         {{ __("Usuarios") }}<!-- Me crea el boton Usuarios si estas logeado como admin -->
                          </a>
                         @endif
+                        <a href="{{route('projects.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
+                        {{ __("Contacta") }}<!-- Me crea el boton Proyectos al al lado de Laravel una vez estoy autenticado en /projects(la carpeta que hemos creado en views,y llama a su index.) -->
+                        </a>
                     </div>
                 </div>   
                 @endauth
