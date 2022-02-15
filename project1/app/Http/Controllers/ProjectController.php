@@ -24,8 +24,8 @@ class ProjectController extends Controller
     public function index()
     {
         if(Auth::user()->hasRoles('Admin')){
-            $projects = Project::with('user')->paginate(10);
-            return view("admin.indexAdmin", compact("projects"));
+            $projects = Project::all();
+            return view("admin.projects", compact("projects"));
         }else{
             $projects = Auth::user()->project()->paginate(10);
             return view("projects.index", compact("projects"));

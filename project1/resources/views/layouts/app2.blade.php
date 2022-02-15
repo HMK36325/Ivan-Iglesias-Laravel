@@ -17,7 +17,7 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-red-900 py-6">
+        <header class="bg-green-700 py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
@@ -31,13 +31,13 @@
                         <a href="{{route('projects.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
                         {{ __("Proyectos") }}<!-- Me crea el boton Proyectos al al lado de Laravel una vez estoy autenticado en /projects(la carpeta que hemos creado en views,y llama a su index.) -->
                         </a>
+                        <a href="{{url('contacta')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
+                        {{ __("Contacta") }}<!-- Me crea el boton Proyectos al al lado de Laravel una vez estoy autenticado en /projects(la carpeta que hemos creado en views,y llama a su index.) -->
                         @if(Auth::user()->hasRoles('Admin'))
-                        <a href="{{route('admin.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
-                        {{ __("Usuarios") }}<!-- Me crea el boton Usuarios si estas logeado como admin -->
+                        <a href="{{route('projects.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
+                        {{ __("Panel Administrador") }}<!-- Me crea el boton Admin si estas logeado como admin -->
                          </a>
                         @endif
-                        <a href="{{route('projects.index')}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-500 mr-4">
-                        {{ __("Contacta") }}<!-- Me crea el boton Proyectos al al lado de Laravel una vez estoy autenticado en /projects(la carpeta que hemos creado en views,y llama a su index.) -->
                         </a>
                     </div>
                 </div>   

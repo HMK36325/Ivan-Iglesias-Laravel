@@ -9,7 +9,7 @@
     @isset($update)
         @method("PUT")
     @endisset
-     <h1 class="font-semibold py-5 text-blue mb-10 bg-red-900 text-white px-5">{{ $title }} </h1>
+     <h1 class="font-semibold py-5 text-blue mb-10 bg-green-500 text-white px-5">{{ $title }} </h1>
     <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full px-5">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold -my-1 mb-3" for="name">
