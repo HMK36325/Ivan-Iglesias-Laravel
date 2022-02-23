@@ -11,6 +11,7 @@
             <th scope="col">Email</th>
             <th scope="col">Alta</th>
             <th scope="col">Rol</th>
+            <th scope="col">Acción</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +25,7 @@
                 {{ $role->display_name  }}
                 @endforeach
             </td>
+            <td><a href="#" class="text-success">{{ __("Editar") }}</a></td>
         </tr>
         @endforeach
     </tbody>

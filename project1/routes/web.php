@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProjectController;
@@ -31,7 +32,7 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('projects', ProjectController::class);
-Route::resource('admin', UserController::class);
+Route::resource('admin', AdminController::class);
 
 Route::get('/prueba',function(){//RUTA PARA HACER PRUEBAS Y VER LOS CAMBIOS Y EJECUTAR ALGUN CAMBIO COMO CAMBIAR PERMISOS
     // $user=User::find(47)->roles()->sync([1,2,3]); //LE DOY AL USUARIO QUE QUIERO LOS ROLES QUE QUIERO
