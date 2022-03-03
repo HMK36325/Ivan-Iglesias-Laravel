@@ -96,8 +96,15 @@
 
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20" id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Peliculas</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ route('admin.index') }}">Premiun</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{url('contacta')}}">Contacta</a>
                     </li>
                     @guest
                     <li class="mr-3">
@@ -109,7 +116,9 @@
                     </li>
                     @endif
                     @else
-                    <span>{{ Auth::user()->name }}</span>
+                    <li class="mr-3">
+                        <span class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4">{{ Auth::user()->name }} </span>
+                    </li>
                     <li class="mr-3">
                         <a class="no-underline hover:underline" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();" class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ route('logout') }}">LogOut</a>
@@ -119,15 +128,6 @@
                     </li>
                     @endguest
                 </ul>
-
-
-                <!-- <button
-            id="navAction"
-            class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
-          >
-            Action
-          </button> -->
-
             </div>
         </div>
     </nav>
