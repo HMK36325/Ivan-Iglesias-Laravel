@@ -27,7 +27,7 @@ class HomeController extends Controller
         if (Auth::user()->can('admin.layout')) {
             return view("admin.layout");
         } else {
-            return view('home');
+            return view('welcome');
         }
     }
 }

@@ -12,9 +12,9 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {  
         $this->call(RoleSeeder::class);
-
+        
         //Genero un usuario siempre igual que va ser nuestro admin
         \App\Models\User::create([
             'name' => 'Raul Nuñez',
@@ -25,8 +25,9 @@ class DatabaseSeeder extends Seeder
             ])->assignRole('Admin');  
 
         \App\Models\User::factory(9)->create();
-
+        \App\Models\User::find(2)->assignRole('Premiun');
         $this->seedRelationRolesUser();
+        
     }
 
     public function seedRelationRolesUser()

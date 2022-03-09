@@ -101,7 +101,7 @@
                         <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Peliculas</a>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ route('admin.index') }}">Premiun</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('premiun') }}">Premiun</a>
                     </li>
                     <li class="mr-3">
                         <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{url('contacta')}}">Contacta</a>

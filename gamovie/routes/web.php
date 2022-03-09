@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactaMail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +31,25 @@ Route::resource('admin', \App\Http\Controllers\Admin\AdminController::class);
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth','forbid-banned-user');
 
 
+
+//PAGOS
+
+Route::get('premiun', [PaymentController::class,'show'])->name('premiun');
+Route::get('processPaypal', [PaymentController::class,'processPaypal'])->name('processPaypal');
+Route::get('processSuccess', [PaymentController::class,'processSuccess'])->name('processSuccess');
+Route::get('processCancel', [PaymentController::class,'processCancel'])->name('processCancel');
+
+//Contacta
+
 //PARA NO CREAR UN CONTACTACONTROLLER SOLO PARA ESTO, METO EN WEB ESTE METODO
 Route::get('contacta',function(){
-    $user= Auth::user();
-    return view("contacta.index", compact("user")); //DEVUELVE EL FORMULARIO Y LO RELLENA CON LOS DATOS DEL USUARIO LOGEADO
+    if (Auth::check()) {
+        $user= Auth::user();
+        return view("contacta.index", compact("user")); //DEVUELVE EL FORMULARIO Y LO RELLENA CON LOS DATOS DEL USUARIO LOGEADO
+    }else{
+        return redirect('/login');
+    }
+    
 });
 
 Route::post('contactaProcess',function(Request $request){
