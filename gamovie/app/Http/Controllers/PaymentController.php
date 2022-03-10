@@ -67,6 +67,7 @@ class PaymentController extends Controller
         $response = $provider->capturePaymentOrder($request['token']);
 
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
+            Auth::user()->assignRole('Premiun');
             return redirect()
                 ->route('premiun')
                 ->with('success', 'Transaction complete.');

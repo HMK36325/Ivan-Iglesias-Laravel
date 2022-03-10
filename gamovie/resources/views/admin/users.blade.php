@@ -3,7 +3,7 @@
 @section('title', 'Users')
 
 @section('content')
-<table class="table">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th scope="col">#</th>

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -15,35 +16,44 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view("admin.layout");
+        if (Auth::user()->can('admin.layout')) {
+            return view("admin.layout");
+        } else {
+            return view('welcome');
+        }
     }
 
-    public function users(){
-
-        $users = User::all();
-        return view("admin.users", compact("users"));
+    public function users()
+    {
+        if (Auth::user()->can('admin.layout')) { 
+            $users = User::all();
+            return view("admin.users", compact("users"));
+        } else {
+            return view('welcome');
+        }
     }
 
-    public function ban($user_id){
+    public function ban($user_id)
+    {
 
         $user = User::find($user_id);
 
         $user->ban();
-        
+
         return redirect()
-        ->back()
-        ->with('success', 'Usuario baneado');
+            ->back()
+            ->with('success', 'Usuario baneado');
     }
 
-    public function unban($user_id){
+    public function unban($user_id)
+    {
 
         $user = User::find($user_id);
 
         $user->unban();
-        
-        return redirect()
-        ->back()
-        ->with('success', 'Usuario desbaneado');
-    }
 
+        return redirect()
+            ->back()
+            ->with('success', 'Usuario desbaneado');
+    }
 }
