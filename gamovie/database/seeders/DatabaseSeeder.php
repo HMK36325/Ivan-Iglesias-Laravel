@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {  
         $this->call(RoleSeeder::class);
+        $this->call(MovieSeeder::class);
         
         //Genero un usuario siempre igual que va ser nuestro admin
         \App\Models\User::create([

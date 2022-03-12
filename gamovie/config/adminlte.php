@@ -249,7 +249,7 @@ return [
         ],
         [
             'text'        => 'Movies',
-            'url'         => 'admin/pages',
+            'url'         => 'admin/movies',
             'icon'        => 'far fa-fw fa-file',
             'label_color' => 'success',
         ],

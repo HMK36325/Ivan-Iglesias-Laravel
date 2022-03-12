@@ -15,7 +15,7 @@ class CreateMovieUserTable extends Migration
     {
         Schema::create('movie_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('movie_id')->references('id')->on('peliculas')->onDelete('cascade');
+            $table->foreignId('movie_id')->references('id')->on('movies')->onDelete('cascade');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('fecha')->nullable();
             $table->timestamps();

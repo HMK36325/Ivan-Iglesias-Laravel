@@ -17,6 +17,7 @@
     <!--Replace with your tailwind.css once created-->
     <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
     <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
 
     <style>
         @import url("https://rsms.me/inter/inter.css");
@@ -65,6 +66,7 @@
         .browser-mockup>* {
             display: block;
         }
+        
 
         /* Custom code for the demo */
     </style>
@@ -101,7 +103,7 @@
 		</style>
 </head>
 
-<body class="gradient leading-relaxed tracking-wide flex flex-col">
+<body class="bg-gradient-to-b from-indigo-500  leading-relaxed tracking-wide flex flex-col">
     <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
@@ -129,10 +131,10 @@
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Peliculas</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('movies') }}">Peliculas</a>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('premiun') }}">Premiun</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('premiun') }}">Premium</a>
                     </li>
                     <li class="mr-3">
                         <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{url('contacta')}}">Contacta</a>

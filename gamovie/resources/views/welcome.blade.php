@@ -8,7 +8,7 @@
             ¿Qué películas estas buscando?
         </h1>
         <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
-            Ratings, Reseñas y donde ver las mejores Películas!
+            Ratings y Reseñas de tus películas favoritas!
         </p>
 
     </div>
@@ -27,7 +27,7 @@
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:70vh;">
-                <a class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('thebatmanBanner.jpg');" href="{{url('contacta')}}">
+                <a class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('theBatmanB.jpg');" href="{{url('contacta')}}">
                 </a>
             </div>
             <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>

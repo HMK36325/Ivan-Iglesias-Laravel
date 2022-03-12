@@ -78,12 +78,12 @@ class MovieSeeder extends Seeder
 
         ]);
         Movie::create([
-            'name'=>"El Padrino",
-            'director'=>"Francis Ford Coppola",
-            'año'=>"1972",
-            'genero'=>"Crimen",
-            'distribuidora'=>"Paramount Pictures",
-            'imagen'=>"elpadrino.jpg"
+            'name'=>"Piratas del Caribe: La maldición de la Perla Negra",
+            'director'=>"Gore Verbinski",
+            'año'=>"2003",
+            'genero'=>"Aventura",
+            'distribuidora'=>"Walt Disney Pictures",
+            'imagen'=>"piratasDelCaribe.jpg"
 
         ]);
         Movie::create([
@@ -93,6 +93,15 @@ class MovieSeeder extends Seeder
             'genero'=>"Crimen",
             'distribuidora'=>"Paramount Pictures",
             'imagen'=>"elpadrinoII.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"Uncharted",
+            'director'=>"Ruben Fleischer",
+            'año'=>"2022",
+            'genero'=>"Aventura",
+            'distribuidora'=>"Sony Pictures Entertainment",
+            'imagen'=>"uncharted.jpg"
 
         ]);
         Movie::create([
@@ -111,6 +120,15 @@ class MovieSeeder extends Seeder
             'genero'=>"Crimen",
             'distribuidora'=>"Universal Pictures",
             'imagen'=>"elpreciodelpoder.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"El Padrino",
+            'director'=>"Francis Ford Coppola",
+            'año'=>"1972",
+            'genero'=>"Crimen",
+            'distribuidora'=>"Paramount Pictures",
+            'imagen'=>"elpadrino.jpg"
 
         ]);
         Movie::create([
@@ -174,24 +192,6 @@ class MovieSeeder extends Seeder
             'genero'=>"Fantasía",
             'distribuidora'=>"New Line Cinema",
             'imagen'=>"retornoRey.jpg"
-
-        ]);
-        Movie::create([
-            'name'=>"Piratas del Caribe: La maldición de la Perla Negra",
-            'director'=>"Gore Verbinski",
-            'año'=>"2003",
-            'genero'=>"Aventura",
-            'distribuidora'=>"Walt Disney Pictures",
-            'imagen'=>"piratasDelCaribe.jpg"
-
-        ]);
-        Movie::create([
-            'name'=>"Uncharted",
-            'director'=>"Ruben Fleischer",
-            'año'=>"2022",
-            'genero'=>"Aventura",
-            'distribuidora'=>"Sony Pictures Entertainment",
-            'imagen'=>"uncharted.jpg"
 
         ]);
     }

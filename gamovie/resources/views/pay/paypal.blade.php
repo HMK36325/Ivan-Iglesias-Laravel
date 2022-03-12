@@ -16,7 +16,7 @@
 <section class="bg-gray-100 border-b py-8">
     <div class="container max-w-5xl mx-auto m-8">
         <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800">
-            PREMIUN!
+            PREMIUM!
         </h2>
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
@@ -25,7 +25,7 @@
         <div class="flex flex-wrap">
             <div class="w-5/6 sm:w-1/2 p-6">
                 <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                    Disfruta de ser Premiun!
+                    Disfruta de ser Premium!
                 </h3>
                 <p class="text-gray-600 mb-8">
                     Al formar parte de los usuarios premiun, podrás guardar en una lista tus peliculas favoritas!<br /><br />
@@ -84,7 +84,7 @@
 @if (!Auth::user()->can('hacerse.premiun'))
 <section class="gradient w-full mx-auto text-center pt-6 pb-12">
     <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-white">
-        Hazte Premiun!
+        Hazte Premium!
     </h2>
     <div class="w-full mb-4">
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>

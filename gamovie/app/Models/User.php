@@ -47,7 +47,7 @@ class User extends Authenticatable implements BannableContract
         'email_verified_at' => 'datetime',
     ];
 
-    public function peliculas()
+    public function movies()
     {
         return $this->belongsToMany(Movie::class)->withTimestamps();                
     }

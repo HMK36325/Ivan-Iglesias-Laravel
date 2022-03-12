@@ -23,40 +23,48 @@ Route::get('/', ['middleware' => 'forbid-banned-user', function () {
 }]);
 Auth::routes();
 
-Route::get('admin/users',[\App\Http\Controllers\Admin\AdminController::class,'users']);
-Route::get('admin/ban/{user_id}',[\App\Http\Controllers\Admin\AdminController::class,'ban']);
-Route::get('admin/unban/{user_id}',[\App\Http\Controllers\Admin\AdminController::class,'unban']);
-Route::resource('admin', \App\Http\Controllers\Admin\AdminController::class);
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth','forbid-banned-user');
+//ADMIN
+
+Route::group(['middleware' => ['can:admin.layout']], function () {
+    //admin users
+    Route::get('admin/users', [\App\Http\Controllers\Admin\AdminController::class, 'users']);
+    Route::get('admin/ban/{user_id}', [\App\Http\Controllers\Admin\AdminController::class, 'ban']);
+    Route::get('admin/unban/{user_id}', [\App\Http\Controllers\Admin\AdminController::class, 'unban']);
+
+    //ADMIN/MOVIES
+    Route::resource('admin/movies', \App\Http\Controllers\Admin\AdminMovieController::class);
+
+
+    Route::resource('admin', \App\Http\Controllers\Admin\AdminController::class);
+});
+
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth', 'forbid-banned-user');
 
 
 
 //PAGOS
 
-Route::get('premiun', [PaymentController::class,'show'])->name('premiun');
-Route::get('processPaypal', [PaymentController::class,'processPaypal'])->name('processPaypal');
-Route::get('processSuccess', [PaymentController::class,'processSuccess'])->name('processSuccess');
-Route::get('processCancel', [PaymentController::class,'processCancel'])->name('processCancel');
+Route::get('premiun', [PaymentController::class, 'show'])->name('premiun');
+Route::get('processPaypal', [PaymentController::class, 'processPaypal'])->name('processPaypal');
+Route::get('processSuccess', [PaymentController::class, 'processSuccess'])->name('processSuccess');
+Route::get('processCancel', [PaymentController::class, 'processCancel'])->name('processCancel');
 
 //Contacta
 
 //PARA NO CREAR UN CONTACTACONTROLLER SOLO PARA ESTO, METO EN WEB ESTE METODO
-Route::get('contacta',function(){
+Route::get('contacta', function () {
     if (Auth::check()) {
-        $user= Auth::user();
+        $user = Auth::user();
         return view("contacta.index", compact("user")); //DEVUELVE EL FORMULARIO Y LO RELLENA CON LOS DATOS DEL USUARIO LOGEADO
-    }else{
+    } else {
         return redirect('/login');
     }
-    
 });
 
-Route::post('contactaProcess',function(Request $request){
-    $correo=new ContactaMail($request->all());
-    Mail::to("HMK36325@educastur.es")->send($correo);//SE CREA EL EMAIL CON LOS DATOS QUE DEVOLVAMOS EN ContactaMail
-    return redirect(route('home'))->with('success','Email enviado');
+Route::post('contactaProcess', function (Request $request) {
+    $correo = new ContactaMail($request->all());
+    Mail::to("HMK36325@educastur.es")->send($correo); //SE CREA EL EMAIL CON LOS DATOS QUE DEVOLVAMOS EN ContactaMail
+    return redirect(route('home'))->with('success', 'Email enviado');
 });
-
-
-

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Movie;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -16,22 +17,17 @@ class AdminController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->can('admin.layout')) {
-            return view("admin.layout");
-        } else {
-            return view('welcome');
-        }
+
+        return view("admin.layout");
     }
 
     public function users()
     {
-        if (Auth::user()->can('admin.layout')) { 
-            $users = User::all();
-            return view("admin.users", compact("users"));
-        } else {
-            return view('welcome');
-        }
+
+        $users = User::all();
+        return view("admin.users", compact("users"));
     }
+
 
     public function ban($user_id)
     {
