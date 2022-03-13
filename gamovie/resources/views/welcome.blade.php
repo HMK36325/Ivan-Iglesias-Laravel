@@ -8,7 +8,7 @@
             ¿Qué películas estas buscando?
         </h1>
         <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
-            Ratings y Reseñas de tus películas favoritas!
+            Toda la información sobre tus películas favoritas!
         </p>
 
     </div>
@@ -57,5 +57,20 @@
 
         </div>
     </div>
+
+    @if (!Auth::check()))
+    <a href="{{url('premiun')}}">
+        <h2 class="w-full my-8 text-5xl font-black leading-tight text-center text-black hover:underline">
+        Hazte Premium!
+        </h2>
+    </a>
+    @elseif(!Auth::user()->can('hacerse.premiun'))
+    <a href="{{url('premiun')}}">
+        <h2 class="w-full my-8 text-5xl font-black leading-tight text-center text-black hover:underline">
+        Hazte Premium!
+        </h2>
+    </a>
+    @endif
+
 </div>
 @endsection

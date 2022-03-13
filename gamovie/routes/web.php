@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactaMail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PaymentController;
+use Spatie\Permission\Contracts\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,12 @@ Route::group(['middleware' => ['can:admin.layout']], function () {
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth', 'forbid-banned-user');
 
+//MOVIES
 
+Route::get('movies',[\App\Http\Controllers\MovieController::class, 'index']);
+Route::get('movies/{movie_id}',[\App\Http\Controllers\MovieController::class, 'showMovie']);
+Route::get('userMovies',[\App\Http\Controllers\MovieController::class, 'userMovies']);
+Route::get('addMovie/{movie_id}',[\App\Http\Controllers\MovieController::class, 'addMovie']);
 
 //PAGOS
 

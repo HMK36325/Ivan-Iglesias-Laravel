@@ -11,6 +11,11 @@ class Movie extends Model
 
     protected $fillable = [
         'name',
+        'director',
+        'año',
+        'genero',
+        'distribuidora',
+        'imagen',
     ];
 
     public function user()

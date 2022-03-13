@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::factory(9)->create();
         $this->seedRelationRolesUser();
+        //\App\Models\User::find(1)->movies()->sync(1,);
         
     }
 

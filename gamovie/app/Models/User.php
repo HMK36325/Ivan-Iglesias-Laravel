@@ -51,4 +51,12 @@ class User extends Authenticatable implements BannableContract
     {
         return $this->belongsToMany(Movie::class)->withTimestamps();                
     }
+
+    public function hasMovie($movie)
+    {
+        if ($this->movies()->where('movie_id', $movie)->first()) { 
+            return true;
+        }
+        return false;
+    }
 }

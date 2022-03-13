@@ -17,7 +17,7 @@
     <!--Replace with your tailwind.css once created-->
     <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
     <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
     <style>
         @import url("https://rsms.me/inter/inter.css");
@@ -66,41 +66,46 @@
         .browser-mockup>* {
             display: block;
         }
-        
+
 
         /* Custom code for the demo */
     </style>
     <style>
-			.carousel-open:checked + .carousel-item {
-				position: static;
-				opacity: 100;
-			}
-			.carousel-item {
-				-webkit-transition: opacity 0.6s ease-out;
-				transition: opacity 0.6s ease-out;
-			}
-			#carousel-1:checked ~ .control-1,
-			#carousel-2:checked ~ .control-2,
-			#carousel-3:checked ~ .control-3 {
-				display: block;
-			}
-			.carousel-indicators {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				position: absolute;
-				bottom: 2%;
-				left: 0;
-				right: 0;
-				text-align: center;
-				z-index: 10;
-			}
-			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
-			}
-		</style>
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #2b6cb0;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-b from-indigo-500  leading-relaxed tracking-wide flex flex-col">
@@ -109,9 +114,9 @@
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
             <div class="pl-4 flex items-center">
                 <a class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="{{ url('/') }}">
-                <svg class="h-6 w-6 inline-block fill-current text-yellow-300" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-                </svg>
+                    <svg class="h-6 w-6 inline-block fill-current text-yellow-300" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
                     Gamovie
                 </a>
 
@@ -129,16 +134,23 @@
 
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20" id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                    
+
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('movies') }}">Peliculas</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold hover:underline" href="{{ url('movies') }}">Peliculas</a>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('premiun') }}">Premium</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold hover:underline" href="{{ url('premiun') }}">Premium</a>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{url('contacta')}}">Contacta</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold hover:underline" href="{{url('contacta')}}">Contacta</a>
                     </li>
+                    @if (Auth::check())
+                    @if(Auth::user()->can('guardar.movie'))
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold hover:underline" href="{{url('userMovies')}}">Mis Películas</a>
+                    </li>
+                    @endif
+                    @endif
                     @guest
                     <li class="mr-3">
                         <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ route('login') }}">Login</a>
