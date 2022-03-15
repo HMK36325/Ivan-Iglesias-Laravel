@@ -60,7 +60,8 @@
 </div>
 <script>
     var name = document.getElementById('name').value;
-    fetch('https://api.themoviedb.org/4/account/622f49beafe224001c27b410/movie/favorites?api_key=a4c531f7bbb5934a92b6a4b446b6bcc0&language=es', {
+    var page = 1;
+    fetch('https://api.themoviedb.org/4/account/622f49beafe224001c27b410/movie/favorites?api_key=a4c531f7bbb5934a92b6a4b446b6bcc0&language=es&page=' + page, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,6 +70,19 @@
         }).then(res => res.json())
         .then(function(jsonData) {
             console.log('JSON ya parseado:', jsonData)
+            if (jsonData.total_results > 20) {
+                page++
+                fetch('https://api.themoviedb.org/4/account/622f49beafe224001c27b410/movie/favorites?api_key=a4c531f7bbb5934a92b6a4b446b6bcc0&language=es&page=' + page, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJzdWIiOiI2MjJmNDliZWFmZTIyNDAwMWMyN2I0MTAiLCJuYmYiOjE2NDcyNzc2NjEsImF1ZCI6ImE0YzUzMWY3YmJiNTkzNGE5MmI2YTRiNDQ2YjZiY2MwIiwianRpIjoiNDE2MzI3MCIsInNjb3BlcyI6WyJhcGlfcmVhZCIsImFwaV93cml0ZSJdfQ.glT5hdXm0_zuUL22yDwH_vkUoNbsHEeJMumKet9dC-Y',
+                        }
+                    }).then(res => res.json())
+                    .then(function(jsonData2) {
+                        innerHTML(jsonData2);
+                    })
+            }
             innerHTML(jsonData);
         })
         .catch(error => console.error('Error:', error));
