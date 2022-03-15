@@ -35,8 +35,6 @@ Route::group(['middleware' => ['can:admin.layout']], function () {
 
     //ADMIN/MOVIES
     Route::resource('admin/movies', \App\Http\Controllers\Admin\AdminMovieController::class);
-
-
     Route::resource('admin', \App\Http\Controllers\Admin\AdminController::class);
 });
 

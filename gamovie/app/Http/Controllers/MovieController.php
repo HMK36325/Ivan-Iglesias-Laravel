@@ -35,7 +35,6 @@ class MovieController extends Controller
     {
 
         $user = Auth::user();
-
         return view('movies.userMovies', compact("user"));
     }
 }

@@ -78,7 +78,7 @@ class MovieSeeder extends Seeder
 
         ]);
         Movie::create([
-            'name'=>"Piratas del Caribe: La maldición de la Perla Negra",
+            'name'=>"Piratas del Caribe. La maldición de la Perla Negra",
             'director'=>"Gore Verbinski",
             'año'=>"2003",
             'genero'=>"Aventura",
@@ -87,7 +87,7 @@ class MovieSeeder extends Seeder
 
         ]);
         Movie::create([
-            'name'=>"El Padrino 2",
+            'name'=>"El padrino. Parte II ",
             'director'=>"Francis Ford Coppola",
             'año'=>"1974",
             'genero'=>"Crimen",
@@ -114,6 +114,33 @@ class MovieSeeder extends Seeder
 
         ]);
         Movie::create([
+            'name'=>"El señor de los anillos: La comunidad del anillo",
+            'director'=>"Peter Jackson",
+            'año'=>"2001",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"New Line Cinema",
+            'imagen'=>"comunidad.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"El señor de los anillos: Las dos torres",
+            'director'=>"Peter Jackson",
+            'año'=>"2002",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"New Line Cinema",
+            'imagen'=>"dosTorres.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"El señor de los anillos: El retorno del rey",
+            'director'=>"Peter Jackson",
+            'año'=>"2003",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"New Line Cinema",
+            'imagen'=>"retornoRey.jpg"
+
+        ]);
+        Movie::create([
             'name'=>"El Precio del poder",
             'director'=>"Brian de Palma",
             'año'=>"1984",
@@ -129,6 +156,42 @@ class MovieSeeder extends Seeder
             'genero'=>"Crimen",
             'distribuidora'=>"Paramount Pictures",
             'imagen'=>"elpadrino.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"El hobbit: Un viaje inesperado",
+            'director'=>"Peter Jackson",
+            'año'=>"2012",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"New Line Cinema",
+            'imagen'=>"hobbit1.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"El hobbit: La desolación de Smaug",
+            'director'=>"Peter Jackson",
+            'año'=>"2013",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"New Line Cinema",
+            'imagen'=>"hobbit2.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"El hobbit: La batalla de los cinco ejércitos",
+            'director'=>"Peter Jackson",
+            'año'=>"2014",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"New Line Cinema",
+            'imagen'=>"hobbit3.jpg"
+
+        ]);
+        Movie::create([
+            'name'=>"Malditos bastardos",
+            'director'=>"Quentin Tarantino",
+            'año'=>"2009",
+            'genero'=>"Fantasía",
+            'distribuidora'=>"Universal Pictures",
+            'imagen'=>"bastard.jpg"
 
         ]);
         Movie::create([
@@ -165,33 +228,6 @@ class MovieSeeder extends Seeder
             'genero'=>"Acción",
             'distribuidora'=>"Warner Bros",
             'imagen'=>"thebatman.jpg"
-
-        ]);
-        Movie::create([
-            'name'=>"El Señor de los anillos: La Comunidad del Anillo",
-            'director'=>"Peter Jackson",
-            'año'=>"2001",
-            'genero'=>"Fantasía",
-            'distribuidora'=>"New Line Cinema",
-            'imagen'=>"comunidad.jpg"
-
-        ]);
-        Movie::create([
-            'name'=>"El señor de los anillos: Las dos torres",
-            'director'=>"Peter Jackson",
-            'año'=>"2002",
-            'genero'=>"Fantasía",
-            'distribuidora'=>"New Line Cinema",
-            'imagen'=>"dosTorres.jpg"
-
-        ]);
-        Movie::create([
-            'name'=>"El señor de los anillos: El retorno del rey",
-            'director'=>"Peter Jackson",
-            'año'=>"2003",
-            'genero'=>"Fantasía",
-            'distribuidora'=>"New Line Cinema",
-            'imagen'=>"retornoRey.jpg"
 
         ]);
     }

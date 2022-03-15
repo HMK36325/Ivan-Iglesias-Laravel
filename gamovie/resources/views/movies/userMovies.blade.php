@@ -1,43 +1,23 @@
-
+@extends('layouts.footer')
 @extends('layouts.app')
 @section('content')
-<div class="container flex justify-center mx-auto">
-    <div class="flex flex-col">
-        <div class="w-full">
-            <div class="border-b border-gray-200 shadow">
-                <table>
-                    <thead class="bg-gray-50">
-                        <th class="px-6 py-2 text-xs text-gray-500">
-                            -
-                        </th>
-                        <th class="px-6 py-2 text-xs text-gray-500">
-                            Descripción
-                        </th>
-                        <th class="px-6 py-2 text-xs text-gray-500">
-                            Fecha
-                        </th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white">
-                        @foreach($user->movies as $movie)
-                        <tr class="whitespace-nowrap">
-                            <td class="px-6 py-4">
-                                <div class="text-sm text-gray-900">
-                                    Jon doe
-                                </div>
-                            </td>
-                            <td class="px-6 py-4">
-                                <div class="text-sm text-gray-500">Nombre:{{$movie->name}}</div>
-                            </td>
-                            <td class="px-6 py-4 text-sm text-gray-500">
-                            {{$movie->fecha}}
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+<div class=" container w-full mb-40 ml-60 grid grid-cols-3 gap-4 content-center">
+    @forelse($user->movies as $movie)
+    <div class="w-full col-span-1 flex">
+        <img class="border-solid border-2 border-black" src="{{$movie->imagen}}" alt="">
+        <div class="ml-3 p-3">
+            <p class="text-lg font-bold italic">{{$movie->name}}</p>
+            <p class="font-bold text-sm">{{$movie->director}}</p>
+            <p class="font-light text-sm">{{$movie->año}}</p>
         </div>
     </div>
+
+    @empty
+
+    <div class="bg-indigo-100 text-center border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <p><strong class="font-bold">{{ __("No hay peliculas") }}</strong></p>
+    </div>
+    @endforelse
 </div>
+
 @endsection
