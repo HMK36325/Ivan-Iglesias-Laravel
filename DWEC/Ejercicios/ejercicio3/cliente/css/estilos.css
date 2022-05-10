@@ -1,0 +1,66 @@
+
+/************************** Estilos generales ************************** */
+
+@font-face{
+    font-family:Roboto;
+    src:url("fonts/Roboto-Regular.ttf");    
+}
+
+*{
+	font-family:"Roboto";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.operarios:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+
+.operario{
+	width:300px;
+	float:left;
+	padding:20px;
+	border:2px solid black;	
+	margin:20px;
+}
+
+
+.operario img{
+	display:block;
+	width:80%;
+	margin:0 auto;
+}
+
+.operario .botones{
+	width:100%;
+	margin-top:20px;
+}
+
+.operario .botones button{
+	width:40%;
+	margin:10x;
+}
+
+.tareas:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+
+.tarea{
+	width:300px;
+	float:left;
+	padding:20px;
+	border:2px solid black;	
+	margin:20px;
+}
+
+
+

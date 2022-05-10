@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -29,6 +30,16 @@ class MovieController extends Controller
         DB::insert('insert into movie_user ( movie_id,user_id,fecha) values (?, ?,?)', [$id, Auth::user()->id, $time]);
 
         return Redirect::back()->with('success', '¡Pelicula añadida!');
+    }
+
+    
+    public function detach($id)
+    {
+        $user=User::find(Auth::id());
+
+        $user->movies()->detach($id);
+
+        return Redirect::back();
     }
 
     public function userMovies()

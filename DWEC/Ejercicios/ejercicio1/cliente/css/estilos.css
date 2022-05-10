@@ -1,0 +1,148 @@
+
+/********************* Estilos generales ******************************/
+
+*{
+	font-family: 'Ubuntu', sans-serif;
+        box-sizing: border-box;
+}
+
+
+@font-face{
+	font-family: "Ubuntu";
+	src: url("fonts/Ubuntu-Regular.ttf");
+}
+
+/********************* Título de la página ******************************/
+
+h1{
+    text-align:center;
+    color: #FFF;
+    font-size:3em;
+}
+
+h1 span{
+    background-color:#ebca0b;
+    border-radius:3px;
+    padding:10px;
+}
+
+
+/********************* Selector  de exámenes ******************************/
+
+#selector{
+   padding:20px;
+   float:left;
+   width:60%;
+}
+
+#selector select{
+	float:left;
+	width:40%;
+	padding:2px;
+        font-size:1.1em;
+}
+
+#selector select:focus{
+	outline:0;
+}
+
+#selector label{
+	float:left;
+	width:20%;
+         font-size:1.5em;       
+}
+
+/********************* Contenedor de preguntas ******************************/
+
+
+#preguntas{
+   padding:20px;
+}
+
+#preguntas:after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+/********************* Pregunta individual ******************************/
+
+#preguntas .pregunta{
+    width:80%;
+     float:left;
+     clear:both;
+     margin-bottom:15px;
+}
+
+/* Enunciado de la pregunta */
+
+#preguntas .enunciado{
+    font-size:1.5em;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+
+/* Etiquta de cada respuesta */
+
+#preguntas .respuesta label{
+    font-size:1.2em;
+}
+
+
+/* Botón de cada pregunta */
+#preguntas button{
+    background-color:#60c1c6;
+    border:0px solid transparent;
+    font-size:1.3em;
+    color:#FFF;
+    margin-top:10px;
+    margin-left:10px;
+    padding:5px;
+}
+
+#preguntas button:hover{
+    background-color:#4179c6;
+}
+
+#preguntas button[disabled=disabled]{
+    background-color:#999999
+}
+
+#preguntas button:focus {
+    outline:0;
+}
+
+
+/********************* Retroalimentación ******************************/
+
+.acierto{
+   background-color:#8cbd24;
+   color:white;
+   font-size:1.5em;
+   padding:5px;
+   margin-top:10px;
+}
+
+.fallo{
+   background-color:#ff462f;
+   color:white;
+   font-size:1.5em;
+   padding:5px;
+   margin-top:10px;
+}
+
+.no-contestada{
+   background-color:#ffa437;
+   color:white;
+   font-size:1.5em;
+   padding:5px;
+   margin-top:10px;
+}
+
+.sugerencia{
+    background-color: #999999 !important;
+}
+
+
+

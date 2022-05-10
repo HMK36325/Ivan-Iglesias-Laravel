@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio exámenes</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="#" />
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <script src="js/examenes.js"></script>
+        
+    </head>
+    <body>
+        <h1><span>Exámenes</span></h1>
+        
+        <div id="selector"> 
+            <label for="examen">Examen</label>
+            <select name="examen" id="examen">
+                    <option selected value="none">Elige uno...</option>			
+                    <option value="dwec">Desarrollo Web en Entorno Cliente</option>
+                    <option value="dwes">Desarrollo Web en Entorno Servidor</option>
+                    <option value="daw">Despliegue de Aplicaciones Web</option>
+                    <option value="diw">Diseño de Interfaces Web</option>
+            </select>						
+        </div>
+        
+ 
+        <div id="preguntas">
+            <!-- Aquí se genera de manera dinámica el listado de preguntas -->
+        </div>
+         
+    </body>
+</html>

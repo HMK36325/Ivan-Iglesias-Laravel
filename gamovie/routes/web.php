@@ -43,10 +43,11 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 
 //MOVIES
 
-Route::get('movies',[\App\Http\Controllers\MovieController::class, 'index']);
-Route::get('movies/{movie_id}',[\App\Http\Controllers\MovieController::class, 'showMovie']);
-Route::get('userMovies',[\App\Http\Controllers\MovieController::class, 'userMovies']);
-Route::get('addMovie/{movie_id}',[\App\Http\Controllers\MovieController::class, 'addMovie']);
+Route::get('movies', [\App\Http\Controllers\MovieController::class, 'index']);
+Route::get('movies/{movie_id}', [\App\Http\Controllers\MovieController::class, 'showMovie']);
+Route::get('userMovies', [\App\Http\Controllers\MovieController::class, 'userMovies']);
+Route::get('addMovie/{movie_id}', [\App\Http\Controllers\MovieController::class, 'addMovie']);
+Route::get('detachMovie/{movie_id}', [\App\Http\Controllers\MovieController::class, 'detach']);
 
 //PAGOS
 

@@ -59,4 +59,7 @@
         @endforeach
     </tbody>
 </table>
+<div class="d-flex">
+    {!! $movies->links() !!}
+</div>
 @stop

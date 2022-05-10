@@ -45,13 +45,13 @@
 <div class="self-center w-full mt-24">
     @if (!Auth::check())
     <a href="{{url('premiun')}}">
-        <h2 class="w-full my-8 text-5xl font-black leading-tight text-center text-black hover:underline">
+        <h2 class="w-full my-8 text-3xl font-black leading-tight ml-4 text-black hover:underline">
             Hazte Premium!
         </h2>
     </a>
     @elseif(!Auth::user()->can('hacerse.premiun'))
     <a href="{{url('premiun')}}">
-        <h4 class="w-full my-8 text-5xl font-black leading-tight text-center text-black hover:underline">
+        <h4 class="w-full my-8 text-3xl font-black leading-tight ml-4  text-black hover:underline">
             Hazte Premium!
         </h4>
     </a>
@@ -97,6 +97,7 @@
 
         });
 
+	//https://api.themoviedb.org/3/search/movie?api_key=a4c531f7bbb5934a92b6a4b446b6bcc0&language=es&query=el+se%C3%B1or+de+los+anillos+la+comunidad+del+anillo
     }
 </script>
 @endsection

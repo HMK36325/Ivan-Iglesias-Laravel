@@ -9,6 +9,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
+    <link rel="icon" href="{{ asset('favicon.png') }}">
 
     <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
@@ -148,6 +149,13 @@
                     @if(Auth::user()->can('guardar.movie'))
                     <li class="mr-3">
                         <a class="inline-block py-2 px-4 text-black font-bold hover:underline" href="{{url('userMovies')}}">Mis Películas</a>
+                    </li>
+                    @endif
+                    @endif
+                    @if (Auth::check())
+                    @if(Auth::user()->can('admin.layout'))
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold hover:underline" href="{{url('admin')}}">Panel Admin</a>
                     </li>
                     @endif
                     @endif

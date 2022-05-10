@@ -1,0 +1,43 @@
+body {
+    background-color: #ffffa6; /* Color de fondo */
+    font-family: "Trebuchet";
+}
+form {
+    margin: 0 auto; /* Centramos el formulario */
+    width: 600px;   /* Sin ancho no podemos centrar el formulario */
+    background-color: white; /* Color blanco para el formulario */
+    padding: 2px; /* separamos los bordes del form del resto de elementos */
+    border-radius: 10px; /* Redondeamos los bordes del form */
+ }
+
+ h1, input, textarea {
+    padding: 5px; /* Separamos la letra del interior (contenido) en los inputs de los bordes */
+    margin: 15px;
+    width: 100%
+ }
+ #img-container{
+    margin: 0 auto; /* Centramos el formulario */
+    width: 300px;   /* Sin ancho no podemos centrar el formulario */
+ }
+
+ label {
+    display: block; /* Ahora los inputs quedan debajo de los label */
+    padding: 5px; /* Separando espacios internos */
+}
+ #preview{
+    width:100%;height:auto
+ }
+ #btnSubir  {
+    width: 40%;
+    background-color: rgb(96, 160, 219);
+    border-radius: 10px;
+}
+h1 {
+    margin: 40px 0; 
+    color: rgb(96, 160, 219);
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 30px; 
+    font-weight: 300; 
+    line-height: 32px;  
+    text-align: center; 
+}

@@ -39,8 +39,11 @@
                                     <div class="form-group"> <label for="form_distribuidora">Distribuidora</label> <input value="{{$movie->distribuidora}}" id="form_name" type="text" name="distribuidora" class="form-control" required="required" data-error="Dist is required."> </div>
                                 </div>
                             </div>
-                            <div class="row ml-2 mb-3">
-                                <label for="form_imagen" class="mr-3">Imagen</label> <input id="form_File" type="file" name="image"  value="{{$movie->imagen}}" data-error="Director is required.">
+                            <div class="row ml-2 mb-3 d-flex flex-column">
+                                <label for="form_imagen" class="mr-3">Imagen</label> <input id="form_File" type="file" name="image" value="{{$movie->imagen}}" data-error="Director is required.">
+                                @if ($movie->imagen!=null)
+                                <span>Imagen actual: '{{$movie->imagen}}' </span>
+                                @endif
                             </div>
                         </div>
                         <div class="row">

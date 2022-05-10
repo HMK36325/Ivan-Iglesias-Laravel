@@ -1,14 +1,15 @@
 @extends('layouts.footer')
 @extends('layouts.app')
 @section('content')
-<div class=" container w-full mb-40 ml-60 grid grid-cols-3 gap-4 content-center">
+<div class=" container w-full mb-40 ml-60 grid grid-cols-3 gap-4 content-center mb-96">
     @forelse($user->movies as $movie)
     <div class="w-full col-span-1 flex">
         <img class="border-solid border-2 border-black" src="{{$movie->imagen}}" alt="">
         <div class="ml-3 p-3">
             <p class="text-lg font-bold italic">{{$movie->name}}</p>
             <p class="font-bold text-sm">{{$movie->director}}</p>
-            <p class="font-light text-sm">{{$movie->año}}</p>
+            <p class="font-light text-sm mb-6">{{$movie->año}}</p>
+            <p class="text-red-600 underline"><a href="{{url('detachMovie', $movie->id) }}">Quitar</a></p>
         </div>
     </div>
 

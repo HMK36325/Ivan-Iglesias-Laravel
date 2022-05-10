@@ -253,6 +253,12 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'label_color' => 'success',
         ],
+        [
+            'text'        => 'Vista Usuario',
+            'url'         => '/',
+            'icon'        => 'far fa-fw fa-file',
+            'label_color' => 'success',
+        ],
     ],
 
     /*

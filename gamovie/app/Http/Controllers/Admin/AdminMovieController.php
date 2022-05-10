@@ -20,7 +20,7 @@ class AdminMovieController extends Controller
     public function index()
     {
 
-        $movies = Movie::all();
+        $movies = Movie::paginate(10);
         return view("admin.movies", compact("movies"));
     }
 
@@ -122,7 +122,7 @@ class AdminMovieController extends Controller
                 "director" => 'required',
                 "genero" => 'required',
                 "distribuidora" => 'required',
-                'image' => 'required|mimes:jpg,jpeg|max:30'
+                'image' => 'mimes:jpg,jpeg|max:30'
             ]);
 
 
